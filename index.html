@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaythoon Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Flash-in animation (slide from left, slow) */
+        @keyframes flashIn {
+          0% { opacity: 0; transform: translateX(-60px) scale(0.95); filter: brightness(1.5); }
+          60% { opacity: 1; transform: translateX(10px) scale(1.03); filter: brightness(1.2); }
+          100% { opacity: 1; transform: translateX(0) scale(1); filter: brightness(1); }
+        }
+        .flash-in {
+          animation: flashIn 2s cubic-bezier(0.4,0,0.2,1) forwards;
+        }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-cyan-50">
+    <!-- Header -->
+    <header class="bg-black/80 backdrop-blur-md shadow-sm border-b border-white/20 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-6">
+          <div class="flex items-center space-x-3">
+            <h1 class="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Jaythoon 
+            </h1>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="text-blue-300 font-medium transition-colors flex items-center h-10">Home</a>
+            <a href="#about" class="text-white hover:text-blue-300 font-medium transition-colors flex items-center h-10">About</a>
+            <a href="#skills" class="text-white hover:text-blue-300 font-medium transition-colors flex items-center h-10">Skills</a>
+            <a href="#education" class="text-white hover:text-blue-300 font-medium transition-colors flex items-center h-10">Education</a>
+            <a href="#portfolio" class="text-white hover:text-blue-300 font-medium transition-colors flex items-center h-10">Projects</a>
+            <a href="#contact" class="inline-flex items-center h-10 px-5 bg-gradient-to-r from-blue-600 to-blue-600 text-white font-semibold rounded-lg shadow-md hover:from-blue-700 hover:to-blue-700 transition-all duration-300">Contact</a>
+          </nav>
+          <div class="md:hidden">
+            <button class="text-white">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Content -->
+            <div class="text-left">
+              <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                <span class="text-base sm:text-lg md:text-xl bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 bg-clip-text text-transparent">
+                  Hi, I'm
+                </span>
+                <br />
+                <span class="inline-block bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent whitespace-nowrap text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mr-4">
+                  Jaythoon Sahibul&nbsp;Jr.
+                </span>
+              </h2>
+              
+              <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+                I’m a passionate Computer Science student with a strong eye for design and a love for
+                creating modern, user-friendly web experiences.
+              </p>
+              
+            
+
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" 
+                   class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  Hire Me
+                  <i class="fas fa-envelope ml-2"></i>
+                </a>
+                
+              </div>
+            </div>
+
+            <!-- Right Side - Profile Image -->
+            <div class="flex justify-center lg:justify-end">
+              <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl">
+                <img src="assets/images/Jaypic.jpg" alt="Jaythoon Sahibul Jr." class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Enhanced Background decorative elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-cyan-400/20 rounded-full blur-xl animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-emerald-400/15 rounded-full blur-lg animate-bounce" style="animation-delay: 0.5s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-20 h-20 bg-purple-400/15 rounded-full blur-lg animate-bounce" style="animation-delay: 1.5s;"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+          <div class="text-center mb-20">
+            <h3 class="text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-600 bg-clip-text text-transparent mb-6">About Me</h3>
+            <div class="w-32 h-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 mx-auto rounded-full shadow-lg"></div>
+          </div>
+
+          <div class="flex justify-center">
+            <div class="relative w-full max-w-6xl">
+              <!-- Enhanced Glassmorphism Card -->
+              <div class="backdrop-blur-xl bg-white/40 border border-white/30 rounded-3xl shadow-2xl overflow-hidden relative group hover:shadow-3xl transition-all duration-500">
+                <div class="flex flex-col lg:flex-row items-center">
+                  <!-- Enhanced Creative Image Container -->
+                  <div class="lg:w-1/2 p-8 lg:p-12 relative">
+                    <div class="relative group">
+                      <!-- Enhanced Floating decorative elements -->
+                      <div class="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-br from-blue-400/40 to-cyan-400/40 rounded-full blur-sm animate-pulse"></div>
+                      <div class="absolute -bottom-6 -right-6 w-10 h-10 bg-gradient-to-br from-emerald-400/40 to-purple-400/40 rounded-full blur-sm animate-pulse" style="animation-delay: 1s;"></div>
+                      <div class="absolute top-1/2 -left-8 w-6 h-6 bg-yellow-400/30 rounded-full blur-sm animate-bounce" style="animation-delay: 0.5s;"></div>
+                      
+                      <!-- Enhanced Main Image with creative frame -->
+                      <div class="relative w-80 h-80 mx-auto lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
+                        <img src="assets/images/Jaypic.jpg" alt="Jaythoon Sahibul Jr." class="w-full h-full object-cover">
+                      </div>
+                      
+                      <!-- BSCS Student badge below image -->
+                      <div class="mt-4 flex justify-center">
+                        <div class="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/50 hover:scale-105 transition-transform duration-300">
+                          <span class="text-blue-600 font-bold text-sm flex items-center">
+                            <i class="fas fa-graduation-cap mr-2 text-blue-500"></i>
+                            BSCS Student
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Enhanced Content -->
+                  <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                    <div class="space-y-8">
+                      <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/30 hover:shadow-xl transition-shadow duration-300">
+                        <p class="text-lg text-gray-800 leading-relaxed">
+                          Hi, I am <span class="font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Jaythoon L. Sahibul Jr.</span> I'm a passionate Computer Science student with a strong eye for design and a love for
+                          creating modern, user-friendly web experiences. I specialize in front-end development,
+                          bringing ideas to life. I'm always eager to learn, grow, and contribute to projects that
+                          make a real impact.
+                        </p>
+                      </div>
+                      
+                      <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 rounded-full text-sm font-semibold shadow-sm hover:scale-105 transition-transform duration-200">
+                          <i class="fas fa-code mr-2"></i>Frontend Development
+                        </span>
+                        <span class="px-4 py-2 bg-gradient-to-r from-cyan-100 to-cyan-200 text-cyan-800 rounded-full text-sm font-semibold shadow-sm hover:scale-105 transition-transform duration-200">
+                          <i class="fas fa-paint-brush mr-2"></i>UI/UX Design
+                        </span>
+                        <span class="px-4 py-2 bg-gradient-to-r from-emerald-100 to-emerald-200 text-emerald-800 rounded-full text-sm font-semibold shadow-sm hover:scale-105 transition-transform duration-200">
+                          <i class="fas fa-lightbulb mr-2"></i>Problem Solving
+                        </span>
+                      </div>
+                      
+                      <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="assets/Sahibul CV.pdf" download
+                           class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-2xl shadow-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                          <i class="fas fa-cloud-download-alt mr-3"></i>
+                          Download CV
+                        </a>
+                        <a href="#contact" 
+                           class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-2xl shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
+                          <i class="fas fa-envelope mr-3"></i>
+                          Get In Touch
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-cyan-900 to-emerald-800 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-white mb-4 drop-shadow">Skills</h3>
+            <p class="text-lg text-white/80 drop-shadow">What I Do Best</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- Front-End Development -->
+            <div class="skill-card-horiz bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-3">
+                <i class="fas fa-code text-2xl text-blue-600"></i>
+              </div>
+              <h4 class="text-lg font-bold text-blue-700 mb-1">Front-End Development</h4>
+              <p class="text-gray-700 text-sm">HTML, CSS, JavaScript</p>
+            </div>
+            <!-- UI/UX Design -->
+            <div class="skill-card-horiz bg-gradient-to-br from-pink-50 via-fuchsia-50 to-pink-100 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-pink-100 mb-3">
+                <i class="fas fa-paint-brush text-2xl text-pink-500"></i>
+              </div>
+              <h4 class="text-lg font-bold text-pink-600 mb-1">UI/UX Design</h4>
+              <p class="text-gray-700 text-sm">Intuitive, aesthetic interfaces</p>
+            </div>
+            <!-- Client Relations -->
+            <div class="skill-card-horiz bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-100 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-emerald-100 mb-3">
+                <i class="fas fa-handshake text-2xl text-emerald-600"></i>
+              </div>
+              <h4 class="text-lg font-bold text-emerald-700 mb-1">Client Relations</h4>
+              <p class="text-gray-700 text-sm">Communicating technical concepts</p>
+            </div>
+            <!-- Project Collaboration -->
+            <div class="skill-card-horiz bg-gradient-to-br from-yellow-50 via-amber-50 to-yellow-100 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-yellow-100 mb-3">
+                <i class="fas fa-users text-2xl text-yellow-600"></i>
+              </div>
+              <h4 class="text-lg font-bold text-yellow-700 mb-1">Project Collaboration</h4>
+              <p class="text-gray-700 text-sm">Teamwork, communication, problem-solving</p>
+            </div>
+            <!-- Responsive Design -->
+            <div class="skill-card-horiz bg-gradient-to-br from-cyan-50 via-blue-50 to-cyan-100 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-cyan-100 mb-3">
+                <i class="fas fa-mobile-alt text-2xl text-cyan-600"></i>
+              </div>
+              <h4 class="text-lg font-bold text-cyan-700 mb-1">Responsive Design</h4>
+              <p class="text-gray-700 text-sm">Mobile-first, cross-browser</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .skill-card-horiz {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+        }
+        .skill-card-horiz.visible {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+        @media (max-width: 1023px) {
+          .lg\:grid-cols-5 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+        }
+        @media (max-width: 639px) {
+          .sm\:grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+        }
+        /* Dark geometric background for skills section */
+        #skills::before {
+          content: '';
+          position: absolute;
+          top: -120px;
+          left: -120px;
+          width: 400px;
+          height: 400px;
+          background: linear-gradient(135deg, #0ea5e9cc 40%, transparent 100%), radial-gradient(circle at 40% 40%, #1e293b88 60%, transparent 100%);
+          border-radius: 30% 70% 60% 40%/60% 30% 70% 40%;
+          z-index: 0;
+        }
+        #skills::after {
+          content: '';
+          position: absolute;
+          bottom: -140px;
+          right: -140px;
+          width: 420px;
+          height: 420px;
+          background: linear-gradient(225deg, #22d3ee99 40%, transparent 100%), radial-gradient(circle at 60% 60%, #33415577 60%, transparent 100%);
+          border-radius: 60% 40% 30% 70%/40% 60% 30% 70%;
+          z-index: 0;
+        }
+        #skills > div {
+          position: relative;
+          z-index: 1;
+        }
+      </style>
+      <script>
+        // Staggered animation for horizontal grid
+        document.addEventListener('DOMContentLoaded', function() {
+          function revealSkillsHoriz() {
+            const cards = document.querySelectorAll('.skill-card-horiz');
+            const grid = document.querySelector('.grid');
+            if (!grid) return;
+            const rect = grid.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+              cards.forEach((card, idx) => {
+                setTimeout(() => {
+                  card.classList.add('visible');
+                }, idx * 200);
+              });
+              window.removeEventListener('scroll', revealSkillsHoriz);
+            }
+          }
+          window.addEventListener('scroll', revealSkillsHoriz);
+          setTimeout(revealSkillsHoriz, 400);
+        });
+      </script>
+
+      <!-- Education Section -->
+      <section id="education" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Education</h3>
+          </div>
+          <div class="relative">
+            <div class="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-200 via-blue-400 to-blue-200 rounded-full hidden sm:block"></div>
+            <div class="space-y-12 pl-0 sm:pl-20">
+              <!-- High School -->
+              <div class="relative flex items-start education-flash">
+                <div class="hidden sm:flex flex-col items-center mr-8 min-w-[40px]">
+                  <span class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white text-2xl shadow-lg"><i class="fas fa-school"></i></span>
+                  <span class="flex-1 w-px bg-blue-200"></span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-blue-100 p-6 flex-1">
+                  <h4 class="text-xl font-semibold text-blue-700">Zamboanga Chong Hua High School</h4>
+                  <p class="text-gray-700">High School</p>
+                  <div class="text-gray-500 mt-2">(S.Y. 2015 - 2019)</div>
+                </div>
+              </div>
+              <!-- Senior High School -->
+              <div class="relative flex items-start education-flash">
+                <div class="hidden sm:flex flex-col items-center mr-8 min-w-[40px]">
+                  <span class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white text-2xl shadow-lg"><i class="fas fa-user-graduate"></i></span>
+                  <span class="flex-1 w-px bg-blue-200"></span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-blue-100 p-6 flex-1">
+                  <h4 class="text-xl font-semibold text-blue-700">Zamboanga Chong Hua High School</h4>
+                  <p class="text-gray-700">Senior High School</p>
+                  <div class="text-gray-500 mt-2">(S.Y. 2020 - 2022)</div>
+                </div>
+              </div>
+              <!-- College -->
+              <div class="relative flex items-start education-flash">
+                <div class="hidden sm:flex flex-col items-center mr-8 min-w-[40px]">
+                  <span class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white text-2xl shadow-lg"><i class="fas fa-university"></i></span>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-blue-100 p-6 flex-1">
+                  <h4 class="text-xl font-semibold text-blue-700">Western Mindanao State University</h4>
+                  <p class="text-gray-700">Bachelor in Science in Computer Science</p>
+                  <div class="text-gray-500 mt-2">Expected Graduation : May 2026</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Projects</h3>
+            <p class="text-lg text-gray-600">Most recent work</p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8">
+            <!-- System Startup Project -->
+            <div class="flex justify-center items-center py-10">
+              <div class="relative w-full max-w-4xl rounded-3xl shadow-2xl overflow-visible bg-transparent group transition-transform duration-300 hover:scale-[1.025]">
+                <!-- Glassmorphism Card -->
+                <div class="backdrop-blur-xl bg-white/30 border border-white/30 rounded-3xl shadow-xl overflow-hidden relative">
+                  <!-- Project Image with floating badge -->
+                  <div class="relative w-full aspect-[16/5] min-h-[220px] md:min-h-[260px] lg:min-h-[300px] overflow-hidden">
+                    <img src="assets/images/project.png" alt="GitGud Project Screenshot" class="object-cover w-full h-full rounded-t-3xl">
+                    <div class="absolute top-4 left-4 flex items-center gap-2 z-10">
+                      <span class="inline-flex items-center px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full shadow-lg"><i class="fas fa-utensils mr-2"></i> Food Tech</span>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-transparent to-transparent pointer-events-none"></div>
+                  </div>
+                  <!-- Content -->
+                  <div class="p-8 flex flex-col items-center relative z-10">
+                    <div class="flex flex-col items-center mb-4">
+                      <h4 class="text-3xl font-extrabold text-blue-600 tracking-tight mb-2 drop-shadow">GitGud
+                        <span class="ml-2 px-3 py-1 bg-white/80 text-blue-700 text-xs font-bold rounded-full border border-blue-200 align-middle">2024</span>
+                      </h4>
+                    </div>
+                    <p class="text-gray-900 text-lg leading-relaxed text-center mb-5 bg-white/60 rounded-xl px-4 py-2 shadow-sm">
+                      Our own company that aims to lighten the workload in food parks by providing a way to place orders on your phones, effectively lessening the lines queued up on each food stall.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-2 mb-6">
+                      <span class="px-3 py-1 bg-emerald-300/80 text-emerald-900 text-xs rounded-full font-semibold shadow">Mobile Ordering</span>
+                      <span class="px-3 py-1 bg-blue-200/80 text-blue-800 text-xs rounded-full font-semibold shadow">Food Park Solution</span>
+                      <span class="px-3 py-1 bg-yellow-200/80 text-yellow-800 text-xs rounded-full font-semibold shadow">Queue Reduction</span>
+                      <span class="px-3 py-1 bg-pink-200/80 text-pink-800 text-xs rounded-full font-semibold shadow">User Experience</span>
+                    </div>
+                    <a href="https://gitgud.xscpry.com/index.php?fbclid=IwY2xjawLXGrhleHRuA2FlbQIxMQABHruFBtvvU1KPn4dO-RCENnUcDiTkVFD9FQ4AraZtLdmPUojlCq_vYpI4p5zD_aem_nFu3CIp-7FbxgBTtWlOtWA" target="_blank" class="inline-flex items-center px-7 py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 text-white text-base font-bold rounded-2xl shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
+                      <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Contact Me</h3>
+            <p class="text-lg text-gray-600">Get in touch</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-900 via-cyan-900 to-indigo-800 backdrop-blur-sm rounded-2xl p-0 shadow-2xl border border-white/20 max-w-6xl mx-auto overflow-hidden">
+            <div class="flex flex-col md:flex-row">
+              <!-- Contact Details -->
+              <div class="basis-full md:basis-2/5 p-8 flex flex-col justify-center">
+                <h4 class="text-2xl font-bold text-white mb-8"></h4>
+                <div class="space-y-8">
+                  <div class="flex items-start">
+                    <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 mr-4"><i class="fas fa-phone text-2xl text-blue-600"></i></span>
+                    <div>
+                      <h5 class="text-lg font-semibold text-white">Phone</h5>
+                      <p class="text-white/80">+639 67 637 6476</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 mr-4"><i class="fas fa-envelope text-2xl text-blue-600"></i></span>
+                    <div>
+                      <h5 class="text-lg font-semibold text-white">Email</h5>
+                      <p class="text-white/80">jaythoonsahibul1@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 mr-4"><i class="fas fa-map-marker-alt text-2xl text-blue-600"></i></span>
+                    <div>
+                      <h5 class="text-lg font-semibold text-white">Address</h5>
+                      <p class="text-white/80">Mormons, Tetuan Natividad Street Zamboanga City</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Divider -->
+              <div class="hidden md:block w-px bg-gradient-to-b from-blue-100 via-blue-200 to-blue-100 my-8"></div>
+              <!-- Contact Form -->
+              <div class="basis-full md:basis-3/5 p-8">
+                <h4 class="text-2xl font-bold text-white mb-8"></h4>
+                <form class="space-y-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label class="block text-sm font-medium text-white mb-2">Name</label>
+                      <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Name">
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-white mb-2">Email</label>
+                      <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="you@email.com">
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-white mb-2">Message</label>
+                    <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Type your message..."></textarea>
+                  </div>
+                  <button type="submit" 
+                          class="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-700 transition-all duration-300 shadow-lg">
+                    Send Message
+                    <i class="fas fa-paper-plane ml-2"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/90 backdrop-blur-md text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <div class="flex items-center space-x-3">
+            <span class="text-xl font-bold">Jaythoon Sahibul Jr.</span>
+            <span class="text-gray-400">BSCS</span>
+          </div>
+
+          <div class="flex items-center space-x-6">
+            <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+          <p class="text-gray-400">© 2025. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Enhanced smooth scrolling for navigation links
+      document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scrolling for all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
+            
+            if (target) {
+              // Calculate offset for fixed header
+              const headerHeight = document.querySelector('header').offsetHeight;
+              const targetPosition = target.offsetTop - headerHeight - 20; // 20px extra padding
+              
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+              
+              // Update active navigation link
+              updateActiveNavLink(href);
+            }
+          });
+        });
+
+        // Function to update active navigation link
+        function updateActiveNavLink(activeHref) {
+          const navLinks = document.querySelectorAll('nav a[href^="#"]');
+          navLinks.forEach(link => {
+            link.classList.remove('text-blue-300', 'border-blue-300');
+            link.classList.add('text-white');
+            if (link.getAttribute('href') === activeHref) {
+              link.classList.remove('text-white');
+              link.classList.add('text-blue-300', 'border-blue-300');
+            }
+          });
+        }
+
+        // Active navigation highlighting on scroll
+        window.addEventListener('scroll', () => {
+          const sections = document.querySelectorAll('section[id]');
+          const navLinks = document.querySelectorAll('nav a[href^="#"]');
+          const headerHeight = document.querySelector('header').offsetHeight;
+          
+          let current = '';
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop - headerHeight - 100;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+              current = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove('text-blue-300', 'border-blue-300');
+            link.classList.add('text-white');
+            if (link.getAttribute('href') === `#${current}`) {
+              link.classList.remove('text-white');
+              link.classList.add('text-blue-300', 'border-blue-300');
+            }
+          });
+        });
+
+        // Set initial active state
+        updateActiveNavLink('#home');
+
+        // Sequential flash-in animation for education section
+        function sequentialFlashIn() {
+          const containers = document.querySelectorAll('.education-flash');
+          containers.forEach((el) => el.classList.remove('flash-in'));
+          containers.forEach((el, idx) => {
+            setTimeout(() => {
+              el.classList.add('flash-in');
+            }, idx * 1400); // 1400ms delay between each for even slower effect
+          });
+        }
+        // Trigger when education section is in view
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top < window.innerHeight &&
+            rect.bottom > 0
+          );
+        }
+        let educationAnimated = false;
+        window.addEventListener('scroll', function() {
+          if (educationAnimated) return;
+          const educationSection = document.getElementById('education');
+          if (isElementInViewport(educationSection)) {
+            sequentialFlashIn();
+            educationAnimated = true;
+          }
+        });
+        // Also trigger if already in view on load
+        setTimeout(() => {
+          const educationSection = document.getElementById('education');
+          if (!educationAnimated && isElementInViewport(educationSection)) {
+            sequentialFlashIn();
+            educationAnimated = true;
+          }
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
